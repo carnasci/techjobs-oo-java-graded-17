@@ -48,9 +48,17 @@ public class Job {
     @Override
     public String toString() {
         String newLine = System.lineSeparator();
-        return newLine + "ID: " + getId() + newLine + "Name: " + getName() + newLine + "Employer: "
+        /*return newLine + "ID: " + getId() + newLine + "Name: " + getName() + newLine + "Employer: "
                 + getEmployer() + newLine + "Location: " + getLocation() + newLine + "Position Type: " + getPositionType() +
-                newLine + "Core Competency: " + getCoreCompetency() + newLine ;
+                newLine + "Core Competency: " + getCoreCompetency() + newLine ;*/
+        String s = String.format(newLine + "ID: %s" + newLine + "Name: %s" + newLine + "Employer: %s" +
+                newLine + "Location: %s" + newLine + "Position Type: %s" + newLine + "Core Competency: %s" + newLine,
+                getId(), getName(), getEmployer(), getLocation(), getPositionType(), getCoreCompetency());
+
+        /*if (getName().equals("")) getName() = "Data not available";
+        if (getEmployer().equals("")) getEmployer() = "Data not available";*/
+
+        return s;
     }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
