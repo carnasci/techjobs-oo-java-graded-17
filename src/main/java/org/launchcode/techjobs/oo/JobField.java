@@ -13,20 +13,21 @@ public abstract class JobField {
         nextId++;
     }
 
-    public JobField(String value) {
-        this.value = value;
+    public JobField(String aValue) {
+        this();
+        this.value = aValue;
     }
 
 
-    @Override
+
     public String toString() {
-        return super.toString();
+        return value;
     }
 
-    @Override
+
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Location)) return false;
+        if (!(o instanceof JobField)) return false;
         JobField jobField = (JobField) o;
         return getId() == jobField.getId();
     }
@@ -44,7 +45,7 @@ public abstract class JobField {
         return id;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setValue(String aValue) {
+        this.value = aValue;
     }
 }

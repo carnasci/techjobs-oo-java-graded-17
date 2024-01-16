@@ -11,7 +11,7 @@ public class Employer extends JobField {
 
     // Custom toString, equals, and hashCode methods:
 
-    @Override
+   /* @Override
     public String toString() {
         return value;
     }
@@ -27,11 +27,11 @@ public class Employer extends JobField {
     @Override
     public int hashCode() {
         return Objects.hash(getId());
-    }
+    }*/
 
     // Getters and Setters:
 
-    public int getId() {
+    /*public int getId() {
         return id;
     }
 
@@ -41,6 +41,6 @@ public class Employer extends JobField {
 
     public void setValue(String value) {
         this.value = value;
-    }
+    }*/
 
 }
