@@ -2,20 +2,10 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class Employer {
-
-    private int id;
-    private static int nextId = 1;
-    private String value;
-
-    public Employer() {
-        id = nextId;
-        nextId++;
-    }
+public class Employer extends JobField {
 
     public Employer(String value) {
-        this();
-        this.value = value;
+        super(value);
         if (value.equals("")) this.value = "Data not available";
     }
 

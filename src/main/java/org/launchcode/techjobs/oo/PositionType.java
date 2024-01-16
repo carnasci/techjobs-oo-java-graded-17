@@ -2,9 +2,9 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class PositionType {
+public class PositionType extends JobField {
 
-    private int id;
+    /*private int id;
     private static int nextId = 1;
     private String value;
 
@@ -16,6 +16,11 @@ public class PositionType {
     public PositionType(String value) {
         this();
         this.value = value;
+        if (value.equals("")) this.value = "Data is not available";
+    }*/
+
+    public PositionType(String value) {
+        super(value);
         if (value.equals("")) this.value = "Data is not available";
     }
 
