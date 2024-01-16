@@ -16,6 +16,7 @@ public class Employer {
     public Employer(String value) {
         this();
         this.value = value;
+        if (value.equals("")) this.value = "Data not available";
     }
 
     // Custom toString, equals, and hashCode methods:

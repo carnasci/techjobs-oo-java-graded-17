@@ -16,6 +16,7 @@ public class PositionType {
     public PositionType(String value) {
         this();
         this.value = value;
+        if (value.equals("")) this.value = "Data is not available";
     }
 
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
