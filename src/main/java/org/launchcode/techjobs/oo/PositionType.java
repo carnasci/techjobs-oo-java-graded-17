@@ -21,7 +21,7 @@ public class PositionType extends JobField {
 
     public PositionType(String value) {
         super(value);
-        if (value.equals("")) this.value = "Data is not available";
+        //if (value.equals("")) this.value = "Data is not available";
     }
 
     // TODO: Add a custom toString() method that returns the data stored in 'value'.

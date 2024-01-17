@@ -6,7 +6,7 @@ public class Employer extends JobField {
 
     public Employer(String value) {
         super(value);
-        if (value.equals("")) this.value = "Data not available";
+        //if (value.equals("")) this.value = "Data not available";
     }
 
     // Custom toString, equals, and hashCode methods:

@@ -47,16 +47,34 @@ public class Job {
 
     @Override
     public String toString() {
+
         String newLine = System.lineSeparator();
+
         /*return newLine + "ID: " + getId() + newLine + "Name: " + getName() + newLine + "Employer: "
                 + getEmployer() + newLine + "Location: " + getLocation() + newLine + "Position Type: " + getPositionType() +
                 newLine + "Core Competency: " + getCoreCompetency() + newLine ;*/
-        String s = String.format(newLine + "ID: %s" + newLine + "Name: %s" + newLine + "Employer: %s" +
-                newLine + "Location: %s" + newLine + "Position Type: %s" + newLine + "Core Competency: %s" + newLine,
-                getId(), getName(), getEmployer(), getLocation(), getPositionType(), getCoreCompetency());
+        if (getName().equals("")) {
+            name = "Data not available";
+        }
+        if (getEmployer().getValue().equals("")) {
+            getEmployer().setValue("Data not available");
+        }
+        if (getLocation().getValue().equals("")) {
+            getLocation().setValue("Data not available");
+        }
+        if (getPositionType().getValue().equals("")) {
+            getPositionType().setValue("Data not available");
+        }
+        if (getCoreCompetency().getValue().equals("")) {
+            getCoreCompetency().setValue("Data not available");
+        }
 
-        /*if (getName().equals("")) getName() = "Data not available";
-        if (getEmployer().equals("")) getEmployer() = "Data not available";*/
+        String s = String.format("\n" + "ID: %s" + "\n" + "Name: %s" + "\n" + "Employer: %s" +
+                        "\n" + "Location: %s" + "\n" + "Position Type: %s" + "\n" + "Core Competency: %s" + "\n",
+                getId(), getName(), getEmployer().getValue(), getLocation().getValue(), getPositionType().getValue(),
+                getCoreCompetency().getValue());
+
+
 
         return s;
     }

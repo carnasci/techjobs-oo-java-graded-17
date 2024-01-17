@@ -45,12 +45,12 @@ public class JobTest {
     }
 
     @Test
-    public void testToStringStartsAndEndsWithANewLine() {
+    public void testToStringStartsAndEndsWithNewLine() {
         Job jobA = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         String newLine = System.lineSeparator();
-        assertEquals(jobA.toString(), newLine + "ID: 6" + newLine + "Name: Product tester" + newLine + "Employer: ACME"
-                + newLine + "Location: Desert" + newLine + "Position Type: Quality control" + newLine + "Core Competency: Persistence" + newLine);
+        assertEquals(jobA.toString(), "\n" + "ID: 5" + "\n" + "Name: Product tester" + "\n" + "Employer: ACME"
+                + "\n" + "Location: Desert" + "\n" + "Position Type: Quality control" + "\n" + "Core Competency: Persistence" + "\n");
     }
 
     @Test
@@ -58,8 +58,8 @@ public class JobTest {
         Job jobA = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         String newLine = System.lineSeparator();
-        assertEquals(jobA.toString(), newLine + "ID: 4" + newLine + "Name: Product tester" + newLine + "Employer: ACME"
-                 + newLine + "Location: Desert" + newLine + "Position Type: Quality control" + newLine + "Core Competency: Persistence" + newLine);
+        assertEquals(jobA.toString(), "\n" + "ID: 4" + "\n" + "Name: Product tester" + "\n" + "Employer: ACME"
+                 + "\n" + "Location: Desert" + "\n" + "Position Type: Quality control" + "\n" + "Core Competency: Persistence" + "\n");
     }
 
     @Test
@@ -67,8 +67,8 @@ public class JobTest {
         Job jobA = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType(""), new CoreCompetency("Persistence"));
 
         String newLine = System.lineSeparator();
-        assertEquals(jobA.toString(), newLine + "ID: 3" + newLine + "Name: Product tester" + newLine + "Employer: Data not available"
-                + newLine + "Location: Desert" + newLine + "Position Type: Data is not available" + newLine + "Core Competency: Persistence" + newLine);
+        assertEquals(jobA.toString(), "\n" + "ID: 3" + "\n" + "Name: Product tester" + "\n" + "Employer: Data not available"
+                + "\n" + "Location: Desert" + "\n" + "Position Type: Data not available" + "\n" + "Core Competency: Persistence" + "\n");
     }
 
 }
